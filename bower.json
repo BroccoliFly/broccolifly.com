@@ -1,0 +1,20 @@
+{
+  "name": "broccolifly.com",
+  "version": "0.0.1",
+  "homepage": "https://github.com/BroccoliFly/broccolifly.com",
+  "authors": [
+    "Alexander Selzer <aselzer3@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0"
+  }
+}

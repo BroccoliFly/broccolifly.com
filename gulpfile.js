@@ -3,7 +3,7 @@ var fs = require("fs"),
     jshint = require("gulp-jshint"),
     less = require("gulp-less"),
     autoprefixer = require("gulp-autoprefixer"),
-    exec = require("gulp-exec");
+    exec = require("child_process").exec;
 
 var jsFiles = ["js/*.js"];
 var lessFiles = ["less/*.less"];
@@ -22,8 +22,15 @@ gulp.task("lint-js", function() {
 });
 
 gulp.task("watch", function() {
-  gulp.watch(lessFiles, ["compileLess"]);
+  gulp.watch(lessFiles, ["compile-less"]);
   gulp.watch(jsFiles, ["lint"]);
 });
 
+gulp.task("serve", function() {
+	exec("node server.js", function(err, stdin, stdout) {
+    if (err) console.error(err);
+  });
+});
+
 gulp.task("default", ["lint-js", "compile-less"]);
+gulp.task("dev", ["default", "watch", "serve"]);

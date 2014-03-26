@@ -27,6 +27,7 @@
     "gulp-jshint": "^1.5.0",
     "gulp-less": "^1.2.3",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-exec": "^1.0.4"
+    "gulp-exec": "^1.0.4",
+    "connect": "^2.14.3"
   }
 }
