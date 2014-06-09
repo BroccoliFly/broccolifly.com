@@ -24,6 +24,13 @@
     li a {
       font-size: 16px;
       color: rgb(187, 195, 209);
+
+      @media (max-width: @screen-sm) {
+        height: 32px;
+        padding-bottom: 4px;
+        font-size: 20px;
+        text-align: center;
+      }
     }
     li a:hover {
       background-color: rgba(40, 40, 40, 0.68);
@@ -33,19 +40,18 @@
 
 .introduction {
   .heading {
-    height: 100px;
-    padding: 2px 0 2px 0;
+    min-height: 100px;
     margin-bottom: 40px;
+    overflow: hidden;
     background-color: rgb(98, 170, 79);
     //box-shadow: inset 0 -1px 3px 0px rgb(75, 75, 75);
   }
-
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 
     font-size: 4em;
     text-align: center;
-    //text-shadow: 0 0 2px rgb(168, 168, 168);
+    //text-shadow: 0 0 2px rgb(168, 168, 168)
   }
 
   h2 {
