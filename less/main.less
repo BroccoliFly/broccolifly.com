@@ -27,13 +27,28 @@
 
       @media (max-width: @screen-sm) {
         height: 32px;
-        padding-bottom: 4px;
+        border-top: solid 1px #000;
         font-size: 20px;
+        padding: 6px;
         text-align: center;
+
+      }
+    }
+    @media (min-width: @screen-sm) {
+      li a.active {
+        border-bottom: solid 2px rgb(43, 112, 35);
       }
     }
     li a:hover {
       background-color: rgba(40, 40, 40, 0.68);
+    }
+    @media (max-width: @screen-sm) {
+      li a.active {
+        background-color: rgba(40, 40, 40, 0.46)
+      }
+      li:last-child {
+        border-bottom: solid 1px #000;
+      }
     }
   }
 }
@@ -51,7 +66,10 @@
 
     font-size: 4em;
     text-align: center;
-    //text-shadow: 0 0 2px rgb(168, 168, 168)
+
+    @media (max-width: @screen-sm) {
+      font-size: 3.2em;
+    }
   }
 
   h2 {
@@ -70,4 +88,21 @@
 
 .container {
   padding-bottom: 80px;
+}
+
+// Headroom.js animations
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+}
+.headroom--unpinned {
+  top: -100px;
+}
+.headroom--pinned {
+  top: 0;
 }
