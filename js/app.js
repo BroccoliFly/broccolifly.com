@@ -33,4 +33,9 @@ if ($(".fly").length > 0) {
   $(".fly").circle();
 }
 
-$(".navbar").headroom({"offset": 100});
+$(".navbar").headroom({
+  offset: 100,
+  tolerance: {
+    down: 2
+  }
+});

@@ -1,4 +1,5 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 .header {
   height: 420px;
@@ -16,16 +17,21 @@
   }
 }
 
+.header.header-small {
+  height: 120px;
+}
+
 .navbar {
   ul.nav {
     li {
-      background-color: rgba(67, 67, 67, 0.6);
+      background-color: rgb(34, 99, 174);
     }
     li a {
       font-size: 16px;
       color: rgb(187, 195, 209);
 
       @media (max-width: @screen-sm) {
+        color: rgb(201, 208, 216);
         height: 32px;
         border-top: solid 1px #000;
         font-size: 20px;
@@ -36,7 +42,7 @@
     }
     @media (min-width: @screen-sm) {
       li a.active {
-        border-bottom: solid 2px rgb(43, 112, 35);
+        border-bottom: solid 2px rgb(228, 112, 35);
       }
     }
     li a:hover {
@@ -44,7 +50,7 @@
     }
     @media (max-width: @screen-sm) {
       li a.active {
-        background-color: rgba(40, 40, 40, 0.46)
+        background-color: rgba(80, 107, 131, 0.63)
       }
       li:last-child {
         border-bottom: solid 1px #000;
@@ -58,7 +64,9 @@
     min-height: 100px;
     margin-bottom: 40px;
     overflow: hidden;
-    background-color: rgb(98, 170, 79);
+    background-color: rgb(98, 99, 79);//rgb(98, 170, 79);
+    font-family: "Montserrat", sans-serif;
+    color: rgb(192, 198, 192);
     //box-shadow: inset 0 -1px 3px 0px rgb(75, 75, 75);
   }
   h1 {
@@ -101,7 +109,7 @@
   -moz-transition: all .2s ease-in-out;
 }
 .headroom--unpinned {
-  top: -100px;
+  top: -140px;
 }
 .headroom--pinned {
   top: 0;
